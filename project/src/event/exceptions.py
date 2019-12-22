@@ -1,0 +1,2 @@
+class ProviderURLException(Exception):
+    pass
