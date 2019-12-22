@@ -1,0 +1,50 @@
+version: '2' 
+services:
+  db:
+    image: postgres
+    container_name: postgres
+
+  nginx:
+    image: nginx:1.12.2
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./src:/src
+      - ./config/nginx:/etc/nginx/conf.d
+      - ./config/ssl:/etc/nginx/ssl
+    depends_on:
+      - web
+
+  web:
+    build: .
+    container_name: web
+    volumes:
+      - ./src:/src
+    expose:
+      - "80"
+      - "443"
+    links:
+      - redis
+      - memcached
+    environment:
+      - DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE}
+      - SECRET_KEY=${SECRET_KEY}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASSWORD=${DATABASE_PASSWORD}
+      - DATABASE_HOST=${DATABASE_HOST}
+    depends_on:
+      - db
+
+  redis:
+    image: redis:4.0.9
+    container_name: redis
+    ports:
+     - '6379:6379'
+
+  memcached:
+    image: memcached:1.5.16
+    container_name: memcached
+    ports:
+     - '11211:11211'
