@@ -1,0 +1,4 @@
+1.- Type integration tests for the request 1 in event/tests/integration_tests.py
+2.- Type url in event/urls.py
+3.- Type EventSerializer in event/serializers.py
+4.- Type ListView in event/views.py
