@@ -108,3 +108,5 @@ AUTHENTICATION_BACKENDS = (
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'events_platform/static'),
 ]
+
+CACHE_DEFAULT_TIME = 60 * 60 * 24 * 7
