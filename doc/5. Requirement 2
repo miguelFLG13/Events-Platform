@@ -1,9 +1,9 @@
 1.- Type unit tests for functions of Resource class in event/tests/unit_tests.py
 2.- Type a task that execute every day at 3 am and get new events of all providers in event/tasks.py
-3.- Type a class named ProviderResource in event/services.py
-4.- Change __init__ in Provider model to init his ProviderResource
-5.- Add __init__ in ProviderResource class to init the provider
-6.- Type get_external_events method in Provider class to save new Events, EventDates and Zones per Provider in event/models.py
+3.- Type a model named ProviderResource in event/services.py
+4.- Change Provider url to ProviderResource in event/models.py
+5.- Remove sold_out and add rest in Zone model in event/models.py
+6.- Type get_external_events method in Provider to save new Events, EventDates and Zones per Provider in event/models.py
 7.- Type a method named get_external_resource to get the information of the Provider events endpoint in ProviderResource in event/services.py
 8.- Type ProviderURLException in event/exceptions.py
 9.- Type a method named adapt_resource to adapt the information of the resource to a standard format in ProviderResource in event/services.py

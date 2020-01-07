@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<eventList version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="eventList.xsd"> 
+    <output> 
+        <base_event base_event_id="291" sell_mode="online" title="Concert"> 
+            <event event_date="2019-06-30T21:00:00" event_id="291" sell_from="2014-07-01T00:00:00" sell_to="2019-06-30T20:00:00" sold_out="false"> 
+                <zone zone_id="40" capacity="243" max_price="20.00" name="Platea" numbered="true" /> 
+                <zone zone_id="38" capacity="100" max_price="0.00" name="test" numbered="false" /> 
+            </event>
+            <event event_date="2019-06-30T21:00:00" event_id="291" sell_from="2014-07-01T00:00:00" sell_to="2019-06-30T20:00:00" sold_out="false"> 
+            </event> 
+        </base_event> 
+        <base_event base_event_id="322" sell_mode="offline" organizer_company_id="2" title="Theater"> 
+        </base_event>
+    </output> 
+</eventList>

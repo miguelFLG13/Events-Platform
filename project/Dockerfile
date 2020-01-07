@@ -5,4 +5,4 @@ RUN mkdir /src
 WORKDIR /src
 ADD ./src /src
 RUN pip install -r requirements.pip
-CMD python manage.py migrate; gunicorn events_platform.wsgi -b 0.0.0.0:80
+CMD python manage.py migrate; gunicorn events_platform.wsgi -b 0.0.0.0:80 & celery worker --app=event.tasks
